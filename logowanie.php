@@ -9,12 +9,6 @@ if((!isset($_POST["login"])) || (!isset($_POST['haslo']))) {
 	exit();
 }
 
-?>
-
-
-
-
-<?php
 
 
 if(isset($_POST["login"])) {
@@ -41,7 +35,7 @@ if($wynik->num_rows > 0) {
 	$user = $wynik->fetch_assoc();
 
 	if(password_verify($haslo, $user["pass"])) {
-		$_SESSION["user_id"] = $user["ID"];
+		$_SESSION["user_id"] = $user["id"];
 		$_SESSION["email"] = $user["email"];
 
 		

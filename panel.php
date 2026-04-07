@@ -19,7 +19,8 @@ if(!isset($_SESSION["user_id"])) {
 <body>
  
 <?php
-echo "Witaj " . $_SESSION["email"];
+echo "Witaj " . htmlspecialchars($_SESSION["email"]);
+
 ?>
  
  |  <a href = "wyloguj.php">Wyloguj sie</a>

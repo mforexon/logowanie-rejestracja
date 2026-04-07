@@ -32,8 +32,17 @@ if (isset($_SESSION["pustylogin"])) {
  
  
  </form>
+ <?php
+ if (isset($_SESSION["sukces"])) {
+    echo "<span style = 'color:red'>". htmlspecialchars($_SESSION['sukces']). "</span>";
+    unset($_SESSION["sukces"]);
+}
+ ?>
+ 
 <br>
   [<a href = "rejestracja.php">Zarejestruj sie</a>]
+  <br><br>
+  [<a href = "forgot.php">Resetuj hasło</a>]
 
 
 </body>
